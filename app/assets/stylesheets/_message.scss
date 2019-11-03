@@ -1,0 +1,22 @@
+.message{
+  padding-bottom: 40px;
+  .upper-message{
+    display: flex;
+    margin-bottom: 10px;
+    .upper-message__user-name{
+      color: #434a54;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .upper-message__date{
+      color: #999999;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+  .lower-message{
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,3 +1,5 @@
+@import "variable.scss";
+
 .chat-main {
   width: calc(100vw - 300px);
   float: left;
@@ -26,6 +28,7 @@
       color: #38aef0;
       text-decoration: none;
        .main-header__edit-btn {
+         color: #38aef0;
          height: 40px;
          line-height: 40px;
          padding: 0 20px;

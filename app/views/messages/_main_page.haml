@@ -2,14 +2,18 @@
   .main-header
     .main-header__box
       %h2.main-header__box__current-group 
-        aaa
+        = @group.name
       %ul.main-header__box__member-list 
         
         Member:
         
-        %li.main-header__box__member-list__member a 
-    = link_to '/groups/1/edit' do
-      .main-header__edit-btn Edit
+        %li.main-header__box__member-list__member
+          - @group.users.each do |user|
+            = user.name
+         
+
+    .main-header__edit-btn 
+      =link_to "Edit", edit_group_path(params[:group_id])
 
 
   .messages

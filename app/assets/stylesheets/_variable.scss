@@ -1,10 +1,15 @@
+
+
 * {
   box-sizing: border-box;
 }
 
-a:-webkit-any-link {
+a {
   color: -webkit-link;
   cursor: pointer;
   text-decoration: none;
-}
+  color: #38aef0;
+  }
+
+
 

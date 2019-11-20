@@ -1,7 +1,7 @@
 $(function(){
 
   function buildHTML(message){
-    image = ( message.image ) ? `<img class="lower-message__image" src=${message.image} >` : "";
+    image = ( message.image ) ? `<img class="lower-message__image" src=${message.image} >` : ""; //三項演算子(投稿したimage(現在20)が{message(json).image=>message.image.url}であることはtrueなら,画像のhtmlを表示,falseなら何も表示しない)　つまり画像のurlを投稿したときはそのurlを読んで画像で表示
                 var html =  
                 ` <div class="message">
                 <div class="upper-message">
@@ -19,7 +19,7 @@ $(function(){
                 </div>
                 ${image}
               </div>`
-          return html;
+          return html; //htmlをajaxに返す
   }
 
 

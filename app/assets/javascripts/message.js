@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(message){
     image = ( message.image ) ? `<img class="lower-message__image" src=${message.image} >` : ""; //三項演算子(投稿したimage(現在20)が{message(json).image=>message.image.url}であることはtrueなら,画像のhtmlを表示,falseなら何も表示しない)　つまり画像のurlを投稿したときはそのurlを読んで画像で表示
                 var html =  
-                ` <div class="message">
+                ` <div class="message" data-message-id="${message.id}">
                 <div class="upper-message">
                   <div class="upper-message__user-name">
                     ${message.user_name}
@@ -56,13 +56,13 @@ $(function(){
           url: "api/messages",
           type: 'get',
           dataType: 'json',
-          data: {last_id: last_message_id}
+          data: {id: last_message_id}
         })
         .done(function(messages){
           var insertHTML = '';
           messages.forEach(function(message){
             insertHTML = buildHTML(message);
-            $('.messages').append(insertHTML);
+            $(".messages").append(insertHTML);
           })
           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 50);
         })
